@@ -1,0 +1,62 @@
+/* İletişim Sayfası Stil Ayarları */
+.contact-page {
+    position: relative; /* Kapsayıcı için pozisyon belirle */
+    width: 100%;
+    height: 100vh; /* Tam ekran boyutu */
+    background-image: url('https://c0.wallpaperflare.com/path/503/477/221/adult-booking-brochure-close-up-15d71244ab4410099d6db304b3300294.jpg'); /* Arka plan resmi ekle */
+    background-size: cover; /* Resmi kapsaması için */
+    background-position: center; /* Ortada yerleştir */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Dikey olarak ortala */
+}
+.contact-container {
+    width:-webkit-fill-available;
+    max-width: 600px; /* Genişliği belirle */
+    padding: 2em; /* Padding ekle */
+    background-color: rgba(255, 255, 255, 0.8); /* Yarı şeffaf beyaz arka plan */
+    border-radius: 10px; /* Kenarları yuvarla */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #333; /* Yazı rengi */
+}
+
+.contact-container h1 {
+    text-align: center;
+    color: #0a5292; /* Başlık rengi */
+    background-color: transparent;
+}
+
+.contact-container label {
+    display: block;
+    margin: 0.5em 0 0.2em;
+    color: #0a5292; /* Etiket rengi */
+    background-color: transparent;
+}
+.contact-container form{
+    background-color: transparent;
+}
+
+.contact-container input, 
+.contact-container textarea {
+    width: 100%;
+    padding: 0.75em; /* Padding'i artır */
+    margin-bottom: 1em;
+    border: 1px solid rgba(10, 82, 146, 0.8); /* Kenar rengi */
+    border-radius: 4px;
+}
+
+.contact-container button {
+    width: 100%;
+    padding: 0.7em;
+    background-color: #0a5292; /* Buton rengi */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.contact-container button:hover {
+    background-color: #45a049; /* Hover rengi */
+}

@@ -1,0 +1,859 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+
+body {
+    background-color: whitesmoke !important;
+}
+
+/*ANİMASYONLU TEXT HEADER*****************/
+.animated-textt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin-left: 4em;
+    font-size: 4em;
+    font-weight: 600;
+    background-color: whitesmoke;
+}
+
+.animated-textt span {
+    position: relative;
+    background-color: whitesmoke;
+}
+
+.animated-textt span::before {
+    content: "";
+    color: #0a5292;
+    animation: words 20s infinite;
+}
+
+.animated-textt span::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    border-left: 2px solid #0a5292;
+    right: -8px;
+    animation: cursor .7s infinite, typing 20s steps(45) infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 2px solid #ff7f5000;
+    }
+}
+
+@keyframes words {
+
+    0%,
+    20% {
+        content: " AKDENİZ";
+    }
+
+    21%,
+    40% {
+        content: " EGE";
+    }
+
+    41%,
+    60% {
+        content: " KARADENİZ";
+    }
+
+    61%,
+    80% {
+        content: " DOĞU ANADOLU";
+    }
+
+    81%,
+    100% {
+        content: " GÜNEYDOĞU ANADOLU";
+    }
+}
+
+@keyframes typing {
+
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+        width: 0;
+    }
+
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+        width: calc(100% + 8px);
+    }
+}
+
+/*RESPONSIVE BÖLÜMÜ*/
+
+@media (min-width:880px) and (max-width:1284px) {
+    .animated-textt {
+        margin-left: 1.2em;
+        font-size: 3.3em;
+        font-weight: 600;
+    }
+}
+
+@media (min-width:576px) and (max-width:880px) {
+    .animated-textt {
+        margin-left: 1em;
+        font-size: 2.2em;
+        font-weight: 600;
+    }
+}
+
+@media (min-width:471px) and (max-width:576px) {
+    .animated-textt {
+        margin-left: 1.2em;
+        font-size: 1.8em;
+        font-weight: 600;
+    }
+
+    @keyframes words {
+
+        0%,
+        20% {
+            content: " AKDENİZ";
+        }
+
+        21%,
+        40% {
+            content: " EGE";
+        }
+
+        41%,
+        60% {
+            content: " KARADENİZ";
+        }
+
+        61%,
+        80% {
+            content: " DOĞU ANADOLU";
+        }
+
+        81%,
+        100% {
+            content: " GÜNEYDOĞU ANADOLU";
+        }
+    }
+}
+
+@media (min-width:370px) and (max-width:470px) {
+    .animated-textt {
+        margin-left: 1.2em;
+        font-size: 1.8em;
+        font-weight: 600;
+    }
+
+    @keyframes words {
+
+        0%,
+        20% {
+            content: " AKDENİZ";
+        }
+
+        21%,
+        40% {
+            content: " EGE";
+        }
+
+        41%,
+        60% {
+            content: " KARADENİZ";
+        }
+
+        61%,
+        80% {
+            content: " DOĞU ANADOLU";
+        }
+
+        81%,
+        100% {
+            content: " GD. ANADOLU";
+        }
+    }
+}
+
+@media (max-width:370px) {
+    .animated-textt {
+        margin-left: 1.2em;
+        font-size: 1.8em;
+        font-weight: 600;
+    }
+
+    @keyframes words {
+
+        0%,
+        20% {
+            content: " AKDENİZ";
+        }
+
+        21%,
+        40% {
+            content: " EGE";
+        }
+
+        41%,
+        60% {
+            content: " KARADENİZ";
+        }
+
+        61%,
+        80% {
+            content: " D. ANADOLU";
+        }
+
+        81%,
+        100% {
+            content: " GD. ANADOLU";
+        }
+    }
+}
+
+/*****************************************/
+
+/*NAVBAR BÖLÜMÜ***************************/
+.navbarr {
+    width: 100%;
+    height: auto;
+    border: 4px solid #0a5292;
+    border-style: double;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-width: min-content;
+    height: 6.5em;
+    margin-left: 1em;
+}
+
+
+
+.navbarr ul {
+    width: -webkit-fill-available;
+    margin-bottom: 0;
+}
+
+.navbarr ul li {
+    display: inline;
+    margin-left: 0.35em;
+}
+
+.navbarr ul a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+
+/* Navbar Arama Çubuğu Kısmı*/
+.search-containerr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.5em;
+    border-radius: 50px;
+    background-color: #f5f5f5;
+    width: 65%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.search-inputt {
+    border: none;
+    outline: none;
+    width: 80%;
+    font-size: 16px;
+    border-radius: 25px;
+    box-sizing: border-box;
+    transition: width 0.3s ease-in-out;
+    background-color: #f5f5f5;
+    margin-bottom: 0;
+}
+
+.search-buton {
+    background-color: #0a5292;
+    color: white;
+    padding: 1.5em;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.search-buton:hover {
+    background-color: #45a049;
+}
+
+.search-inputt:focus {
+    width: 90%;
+    outline: none;
+}
+
+/*COLLAPSE BAR KISMI*/
+.collapsebar {
+    position: absolute;
+    width: 90vw;
+    height: 100%;
+    float: right;
+    background-color: #0a5292;
+    display: none;
+    z-index: 1000;
+    transition: right 0.4s ease;
+    border-radius: 15px;
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideInLeft {
+    0% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        visibility: visible;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        visibility: visible;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+
+.collapsebar ul {
+    list-style: none;
+    font-size: 2em;
+    -webkit-animation-name: rotateInDownLeft;
+    animation-name: rotateInDownLeft;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes rotateInDownLeft {
+    0% {
+        -webkit-transform-origin: left bottom;
+        transform-origin: left bottom;
+        -webkit-transform: rotate3d(0, 0, 1, -45deg);
+        transform: rotate3d(0, 0, 1, -45deg);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform-origin: left bottom;
+        transform-origin: left bottom;
+        -webkit-transform: none;
+        transform: none;
+        opacity: 1;
+    }
+}
+
+@keyframes rotateInDownLeft {
+    0% {
+        -webkit-transform-origin: left bottom;
+        transform-origin: left bottom;
+        -webkit-transform: rotate3d(0, 0, 1, -45deg);
+        transform: rotate3d(0, 0, 1, -45deg);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform-origin: left bottom;
+        transform-origin: left bottom;
+        -webkit-transform: none;
+        transform: none;
+        opacity: 1;
+    }
+}
+
+.collapsebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.bars {
+    margin-right: 0.7em;
+    margin-left: 0.4em;
+    display: none;
+}
+
+.close-themenu {
+    display: none;
+    margin: 0.7em;
+}
+
+a.whatsapp {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: #25d366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+/*****************************************/
+/*FOOTER BÖLÜMÜ***************************/
+.footer {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    background-color: #0a5292;
+
+}
+
+.footercontent i {
+    background-color: transparent;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+}
+
+.footercontent span:nth-child(2) {
+    font-size: 1.6em;
+    background-color: transparent;
+    margin-left: 0.4em;
+    font-weight: 450;
+    color: white;
+    margin-top: 0.7em;
+}
+
+.footercontent span:nth-child(3) {
+    font-size: 0.8em;
+    font-weight: 300;
+    color: white;
+    background-color: transparent;
+    display: block;
+    margin-bottom: 5em;
+
+}
+
+.footercontent {
+    background-color: #0a5292;
+    color: white;
+    word-spacing: 0.1em;
+
+}
+
+.kredikart {
+    background-color: #0a5292;
+    margin-left: 1em;
+    margin-right: 1.5em;
+    margin-top: 2em;
+}
+
+.kredikart img {
+    height: 2em;
+    background-color: #0a5292;
+}
+
+.footercontent i {
+    margin-left: 0.2em;
+}
+
+.footerlogo {
+    background-color: transparent;
+    max-width: min-content;
+    height: 6.5em;
+    margin-left: 1em;
+}
+
+
+@media (min-width:690px) and (max-width:1020px) {
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .kredikart img {
+        margin-left: 1em;
+        height: 1.8em;
+    }
+
+    .logo {
+        height: 5em;
+    }
+
+    .navbarr ul li {
+        font-size: 0.9em;
+    }
+
+}
+
+@media (min-width:300px) and (max-width:690px) {
+    .navbarr ul {
+        display: none;
+    }
+
+    .logo {
+        height: 4.5em;
+    }
+
+    .kredikart img {
+        margin-left: 1em;
+        height: 1.3em;
+    }
+
+    .search-containerr {
+        width: 45% !important;
+    }
+
+    .navbarr ul {
+        font-size: smaller;
+    }
+
+    .footer {
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    }
+
+    .bars {
+        display: block;
+    }
+
+    .animated-textt {
+        font-size: 1.5em;
+    }
+
+}
+
+
+/*****************************************/
+
+
+/*BANNER***************/
+.carousel {
+    width: 60%;
+    margin: 1em;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+}
+
+.carousel-inner {
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+#banner {
+    background-color: whitesmoke;
+    margin:2em;
+    font-weight: 500;
+    width: 30%;
+    font-family: "Poppins", sans-serif;
+    -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes fadeInLeft {
+  0% {
+  opacity: 0;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+  }
+  }
+  @keyframes fadeInLeft {
+  0% {
+  opacity: 0;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+  }
+  }
+  
+.generalcontainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.carousel-item {
+    transition: transform .3s ease-in-out !important;
+}
+@media (min-width:1000px) and (max-width:1150px){
+    .generalcontainer{
+        display:block;
+    } #banner{
+        width:100%;
+        font-size: smaller;
+        margin:0;
+    }
+    .carousel{
+        width: 100%;
+    }
+}
+
+@media (min-width:300px) and (max-width:1000px){
+    .generalcontainer{
+        display:block;
+
+    }
+
+    #banner{
+        width:100%;
+        font-size: smaller;
+        margin:0;
+    }
+    .carousel{
+        width:100%;
+    }
+    .carousel-inner{
+        width:95% !important;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .row{
+        display:block !important;
+    }
+    .col{
+        margin:0 !important;
+    }
+}
+
+/*****************************************/
+
+
+/*HOMEPAGE CONTENT***************/
+.popularegion{
+    text-align: center;
+    font-size: 3em;
+}
+
+.col img {
+    border-radius: 35px;
+    transition: transform 0.2s ease-in-out;
+}
+.col img:hover{
+    transform: scale(1.03);
+}
+
+.col {
+    margin: 1em;
+}
+.col a:hover{
+    border-bottom: 2px solid #0a5292 ;
+}
+
+.col label {
+    font-size: 1.7em;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+
+
+
+/*****************************************/
+/*ORTAKLARIMIZ*****************/
+.logos{
+    overflow: hidden;
+    padding: 60px 0;
+    background-color: whitesmoke;
+    white-space: nowrap;
+    position: relative;
+}
+
+.logos::before,.logos::after{
+    position: absolute;
+    top:0;
+    width:250px;
+    height: 100%;
+    content:"";
+    z-index: 2;
+}
+.logos::before{
+    left:0;
+    background-color: linear-gradient(to left, rgba(255,255,255,0),white);
+}
+.logos::after{
+    right:0;
+    background-color: linear-gradient(to right, rgba(255,255,255,0),rgb(255, 255, 255));
+}
+
+.logos-slide{
+    display: inline-block;
+    animation: 15s slide infinite linear; 
+}
+.logos-slide img{
+    height:65px;
+    margin:0 40px;
+}
+
+@keyframes slide{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-100%);
+    }
+}
+
+
+/*****************************************/
+/*CONT-SLIDE BÖLÜMÜ*/
+.contslide{
+    margin:2.5em 0 2.5em 200px;
+    width:70%;
+    height:25em;
+    display:flex;
+    justify-content: center;
+    gap: 10px;
+}
+.contslide img{
+    width: 15%;
+    height:100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 0.8px solid rgb(116, 116, 116);
+    transition: all ease-in-out 0.5s;
+}
+.contslide img:hover{
+    width: 30%;
+}
+.popularegion h1{
+    margin-top: 2em;
+}
+
+@media (max-width:990px){
+    .contslide{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin:2em 0 2em 0;
+        height:11em;
+        width: 100%;
+    }
+}
+/*****************************************/
+
+.reservation-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1em;
+    
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    border: 2px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    margin-top: 0.5em;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.rez-buton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.rez-buton:hover {
+    background-color: #45a049;
+}
