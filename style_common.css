@@ -428,8 +428,8 @@ a.whatsapp {
     position: fixed;
     right: 10px;
     bottom: 10px;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background-color: #25d366;
     display: flex;
     justify-content: center;
@@ -553,15 +553,16 @@ a.whatsapp {
         text-align: center;
     }
 
-    .bars {
-        display: block;
-    }
-
     .animated-textt {
         font-size: 1.5em;
     }
 
 }
+ @media (max-width:690px){
+    .bars{
+        display:block;
+    }
+ }
 
 
 /*****************************************/
@@ -627,6 +628,7 @@ a.whatsapp {
   transform: none;
   }
   }
+
   
 .generalcontainer {
     width: 100%;
@@ -637,6 +639,7 @@ a.whatsapp {
 
 .carousel-item {
     transition: transform .3s ease-in-out !important;
+    
 }
 @media (min-width:1000px) and (max-width:1150px){
     .generalcontainer{
@@ -725,23 +728,6 @@ a.whatsapp {
     position: relative;
 }
 
-.logos::before,.logos::after{
-    position: absolute;
-    top:0;
-    width:250px;
-    height: 100%;
-    content:"";
-    z-index: 2;
-}
-.logos::before{
-    left:0;
-    background-color: linear-gradient(to left, rgba(255,255,255,0),white);
-}
-.logos::after{
-    right:0;
-    background-color: linear-gradient(to right, rgba(255,255,255,0),rgb(255, 255, 255));
-}
-
 .logos-slide{
     display: inline-block;
     animation: 15s slide infinite linear; 
@@ -797,6 +783,7 @@ a.whatsapp {
         width: 100%;
     }
 }
+
 /*****************************************/
 
 .reservation-form-container {
@@ -858,3 +845,7 @@ input, select, textarea {
 .rez-buton:hover {
     background-color: #45a049;
 }
+
+/****************************************/
+
+  

@@ -6,37 +6,35 @@ window.addEventListener('scroll', function() {
     }
 });
 
-const bars=document.querySelector(".bars");
-const sidebar=document.querySelector(".collapsebar");
-const sidebarclose=document.querySelector(".close-themenu");
+const bars = document.querySelector(".bars");
+const sidebar = document.querySelector(".collapsebar");
+const sidebarclose = document.querySelector(".close-themenu");
 
-bars.addEventListener("click",()=>{
-    bars.style.display="none";
+bars.addEventListener("click", (event) => {
     event.preventDefault();
-    sidebar.style.display="block";
-    sidebarclose.style.display="block";
-    
+    bars.style.display = "none";
+    sidebar.style.display = "block";
+    sidebarclose.style.display = "block";
 });
 
-sidebarclose.addEventListener("click",()=>{
-    sidebar.style.display="none";
-    if(window.innerWidth<=690){
-        bars.style.display="block";
-    }
-    else{
-        bars.style.display="none";
-    }
+sidebarclose.addEventListener("click", (event) => {
     event.preventDefault();
+    sidebar.style.display = "none";
+    if (window.innerWidth <= 690) {
+        bars.style.display = "block";
+    } else {
+        bars.style.display = "none";
+    }
 });
 
 function checkScreenSize() {
-    if (window.innerWidth <= 690) {
+    if (window.innerWidth <= 690 && sidebar.style.display!="block") {
         bars.style.display = 'block';  
     } else {
         bars.style.display = 'none';   
     }
 }
 
-
 window.addEventListener('resize', checkScreenSize);
+
 checkScreenSize();
