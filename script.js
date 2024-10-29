@@ -22,19 +22,8 @@ sidebarclose.addEventListener("click", (event) => {
     sidebar.style.display = "none";
     if (window.innerWidth <= 690) {
         bars.style.display = "block";
-    } else {
-        bars.style.display = "none";
-    }
+    } 
 });
 
-function checkScreenSize() {
-    if (window.innerWidth <= 690 && sidebar.style.display!="block") {
-        bars.style.display = 'block';  
-    } else {
-        bars.style.display = 'none';   
-    }
-}
 
-window.addEventListener('resize', checkScreenSize);
 
-checkScreenSize();
