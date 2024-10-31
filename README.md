@@ -15,6 +15,16 @@
 - **CSS3**: Stil, düzen ve sayfa görselliği.
 - **JavaScript**: Dinamik içerikler ve etkileşim.
 
+## Ekip
+
+Bu projeyi geliştiren ekip üyeleri:
+
+- **Salim Serhat Aka** - Product Owner
+- **Hasan Hüseyin Gümüştepe** - Scrum Master
+- **Semih Canik** - Software Team Leader
+- **Atakan Özbay** - Software Developer
+- **Ahmet Enes Çetinkaya** - Software Developer
+
 ## Kurulum
 
 Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyin:
